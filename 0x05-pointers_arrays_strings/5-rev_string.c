@@ -1,28 +1,21 @@
 #include "main.h"
 /**
- * puts2 - function should print only one character out of two
- * starting with the first one
- * @str: input
- * Return: print
+ * rev_string - reverse a string
+ * @s: the string to be modified
+ * Return: void
  */
-void puts2(char *str)
-{
-	int longi = 0;
-	int t = 0;
-	char *y = str;
-	int o;
 
-	while (*y != '\0')
+void rev_string(char *s)
+{
+	int len = 0, index = 0;
+	char tmp;
+
+	while (s[index++])
+	len++;
+	for (index = len - 1; index >= len / 2; index--)
 	{
-		y++;
-		longi++;
-	}
-	t = longi - 1;
-	for (o = 0 ; o <= t ; o++)
-	{
-		if (o % 2 == 0)
-	{
-		_putchar(str[0]);
-	}
+		tmp = s[index];
+		s[index] = s[len - index - 1];
+		s[len - index - 1] = tmp;
 	}
 }

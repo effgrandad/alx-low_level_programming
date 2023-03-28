@@ -4,19 +4,18 @@
  * @s: input string
  * Return: strings in reverse
  */
-void rev_string(char *s)
-{
-	char rev = s[0];
-	int counter = 0;
-	int i;
 
-	while (s[counter] != '\0')
-	counter++;
-	for (i = 0; i < counter; i++)
+void print_rev(char *s)
+{
+	int c = 0;
+
+	while (s[c] != '\0')
 	{
-		counter--;
-		rev = s[i];
-		s[i] = s[counter];
-		s[counter] = rev;
+		c++;
 	}
+	for (c -= 1; c >= 0; c--)
+	{
+		_putchar(s[c]);
+	}
+	_putchar('\n');
 }

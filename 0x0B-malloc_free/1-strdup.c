@@ -6,6 +6,7 @@
  * _strdup - return pointer to newly allocated space in memory
  * which contains a duplicate of the string parameter
  * @str: the source string
+ * @strdup: source string
  * return: pointer to a duplicate string
  * return NULL for insufficient memory
  */
@@ -17,6 +18,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 	i = 0;
+
 	while (str[i] != '\0')
 	       i++;
 

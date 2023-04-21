@@ -5,6 +5,8 @@
  * print_string - prints string, followed by new line
  * @separator: a separator in between strings
  * @n: number of arguments
+ * Description: If separator is NULL, don’t print it
+ * If one of the string is NULL, print (nil) instead
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {

@@ -5,15 +5,16 @@
 #include <stdio.h>
 /**
  * struct list_s - a singly linked list
+ * @str: a string - (malloced string)
  * @len: the string length
- * @str: malloc string allowing space reservation
- * @next: the next node pointer
+ * @next: it point to the next node
  * Description: a singly linked list node structure
+ * For Holberton project
  */
 typedef struct list_s
 {
-        int len;
-        char *str;
+	char *str;
+       unsigned int len;
         struct list_s *next;
 }list_t;
 

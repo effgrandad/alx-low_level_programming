@@ -1,48 +1,33 @@
 #include "main.h"
 
 /**
- * _powa - program that calculates (base ^ power)
- * @base: base of exponent
- * @power: power of the exponent
- *
- * Return: value of (base ^ power)
+ * print_bnry - program that prints number recursively
+ *@n: decimal number
+ * Return: void
  */
-unsigned long int _powa(unsigned int base, unsigned int power)
+void print_bnry(unsigned long int n)
 {
-	unsigned long int sum;
-	unsigned int j;
-
-	sum = 1;
-	for (j = 1; j <= power; j++)
-		sum *= base;
-	return (sum);
+	if (n == 0)
+		return;
+	print_bnry(n >> 1);
+	if ((n & 1) == 0)
+		_putcha('1');
+	if ((n & 1) == 0)
+		_putcha('0');
 }
 
 /**
- * print_binary - prints a count in binary notation
- * @n: count to print
+ * print_binary - prints a binary notation
+ * @n: converted decimal number
  *
  * Return: void
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int divisor, check;
-	char flag;
-
-	flag = 0;
-	divisor = _powa(2, sizeof(unsigned long int) * 8 - 1);
-	while (divisor != 0)
+	if (n == 0)
+		_putcha('0');
+	else
 	{
-		check = n & divisor;
-		if (check == divisor)
-		{
-			flag = 1;
-			_putcha('1');
-		}
-		else if (flag == 1 || divisor == 1)
-		{
-			_putcha('0');
-		}
-		divisor >>= 1;
+		print_bnry(n);
 	}
 }

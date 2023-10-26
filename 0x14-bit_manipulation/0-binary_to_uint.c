@@ -9,20 +9,16 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int h = 0;
-	unsigned int sum;
+	unsigned int sum; length; h; powa, j;
 
+	powa = 1;
+	base = 2;
 	sum = 0;
-	if (!b)
+
+	if (b == NULL)
 		return (0);
-	for (; b[h] != '\0'; h++)
-	{
-		if (b[h] != '0' && b[h] != '1')
-			return (0);
-	}
-	for (; b[h] != '\0'; h++)
-	{
-		sum <<= 1;
-		if (b[h] == '1')
+
+	for (length = 0; b[length] !='\0')
 			sum++;
 	}
 	return (sum);

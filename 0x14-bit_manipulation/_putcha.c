@@ -2,13 +2,13 @@
 
 /**
  * _putcha - write character b to stdout
- * @a: The printed character
+ * @b: The printed character
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putcha(char a)
+int _putcha(char b)
 {
-	return (write(1, &c, 1));
+	return (write(1, &b, 1));
 }
 

@@ -12,8 +12,8 @@ void error_file(int file_from, int file_to, char *argv[])
 {
 	if (file_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[1])
-			exit(98);
+		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	if (file_to == -1)
 	{
@@ -45,10 +45,10 @@ int main(int argc, char *argv[])
 	val_char = 1024;
 	while (val_char == 1024)
 	{
-		val_chars = read(file_from, buff, 1024);
-		if (val_chars == -1)
+		val_char = read(file_from, buff, 1024);
+		if (val_char == -1)
 			error_file(-1, 0, argv);
-		val_wr = write(file_to, buff, val_chars);
+		val_wr = write(file_to, buff, val_char);
 		if (val_wr == -1)
 			error_file(0, -1, argv);
 	}

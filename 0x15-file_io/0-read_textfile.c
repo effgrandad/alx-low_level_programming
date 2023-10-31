@@ -1,4 +1,4 @@
-#include "maimn.h"
+#include "main.h"
 #include "unistd.h"
 #include "stdlib.h"
 #include "sys/types.h"
@@ -25,7 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buff = malloc(sizeof(char) * letters);
 	if (buff == NULL)
 	{
-		closed(f_d);
+		close(f_d);
 		return (0);
 	}
 	len_r = read(f_d, buff, letters);

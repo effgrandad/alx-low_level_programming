@@ -15,14 +15,14 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (!filename)
 		return (-1);
-	f_d = open(filename, O_WRONLY | O_ APPEND);
+	f_d = open(filename, O_WRONLY | O_APPEND);
 
 	if (f_d == -1)
 		return (-1);
 	if (text_content)
 	{
 		for (; text_content[val_letters]; val_letters++)
-		rwr = write(f_d, text_context, val_letters);
+		rwr = write(f_d, text_content, val_letters);
 		if (rwr == -1)
 			return (-1);
 	}

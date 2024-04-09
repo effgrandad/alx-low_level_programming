@@ -1,4 +1,4 @@
-#include "search_algo.h"
+#include "search_algos.h"
 
 /**
  * jump_search - employs jump search to look for a value in an integer

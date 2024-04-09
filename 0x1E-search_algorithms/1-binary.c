@@ -1,4 +1,4 @@
-#include "search_algo.h"
+#include "search_algos.h"
 
 /**
  * binary_search - uses binary search to look for a value in an array

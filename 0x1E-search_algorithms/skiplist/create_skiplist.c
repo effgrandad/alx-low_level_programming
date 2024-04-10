@@ -3,7 +3,7 @@
 #include "../search_algos.h"
 
 void free_skiplist(skiplist_t *list);
-0
+
 /**
  * init_express - sets up the connected list's express lane
  * @list: Pointer pointing to head node of the list

@@ -3,7 +3,8 @@
 /**
  * _binary_search - employs binary search to look for a value
  * in an array of sorted numbers
- * @size: How many components are there in the array
+ * @left: initializing index of the [sub]array to search
+ * @right: the terminating index of the [sub]array to search
  * @array: A pointer pointing to the array's first element to be searched
  * @value: a value searched for
  * Return: -1 if either the value is absent or the array is NULL.
@@ -24,7 +25,7 @@ int _binary_search(int *array, size_t left, size_t right, int value)
 			printf("%d, ", array[i]);
 		printf("%d\n", array[i]);
 
-i		i = left + (right - left) / 2;
+		i = left + (right - left) / 2;
 		if (array[i] == value)
 			return (i);
 		if (array[i] > value)
